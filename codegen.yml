@@ -1,0 +1,17 @@
+schema: "schema.graphql"
+documents: "src/**/*.{ts,tsx}"
+generates:
+  # The client-preset outputs to src/gql/ and creates:
+  #   - graphql.ts   (all typed operations & fragment types)
+  #   - gql.ts       (the gql() tag function — import this in your components)
+  #   - fragment-masking.ts  (useFragment() helper for data masking)
+  #   - index.ts     (re-exports everything)
+  src/gql/:
+    preset: client
+    config:
+      # Fragment masking: components only see the fields they declare.
+      # This enforces the "fragment-first" colocation pattern.
+      # Set to false if you want to disable masking during the workshop intro.
+      # WORKSHOP NOTE: Toggle this to show participants what masking protects against.
+      fragmentMasking:
+        unmaskFunctionName: "useFragment"
