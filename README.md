@@ -31,7 +31,7 @@ That's it. Docker will:
 4. Generate the Nexus SDL and Apollo Client types
 5. Start the Next.js dev server on port 3000
 
-Open [http://localhost:3000](http://localhost:3000) — you'll see 5 people. Click any one to reach `/person/[id]`.
+Open [http://localhost:7473](http://localhost:7473) — you'll see 5 people. Click any one to reach `/person/[id]`.
 
 To stop: `docker compose down`. To wipe the database and start fresh: `docker compose down -v && docker compose up`.
 
@@ -63,7 +63,7 @@ npm run codegen
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) — you'll see 5 people. Click any one to reach `/person/[id]`.
+Open [http://localhost:7473](http://localhost:7473) — you'll see 5 people. Click any one to reach `/person/[id]`.
 
 ---
 
